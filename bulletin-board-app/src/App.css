@@ -1,0 +1,118 @@
+.app {
+  margin: 0;
+  padding: 0;
+  background-color: #D9D9D9;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.header {
+  background-color: #66D48B;
+  min-height: 100px;
+  color: #565656;
+  padding: 10px 60px;
+  display: flex;
+  align-items: center;
+}
+
+.header__title {
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-align: left;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0;
+  flex: 1;
+}
+
+.header__thread {
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: underline;
+  text-align: right;
+  margin: 0;
+  flex: 1;
+}
+
+.threadList__inner,
+.newThread__inner {
+  width: 500px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.threadList__title {
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+.threadList__container {
+  list-style: none;
+  padding: 0 0 70px 0;
+  margin: 0;
+}
+
+.thread__container {
+  padding: 15px;
+  width: 500px;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #ffffff;
+  border: 1px solid #565656;
+  text-align: left;
+}
+
+.newThread__container {
+  text-align: left;
+}
+
+.newThread__title {
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin: 80px 0 80px 10px;
+}
+
+#thread-title {
+  width: 450px;
+  height: 60px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0 0 10px;
+}
+
+.newThread__button-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.newThread__back-button {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #0F27FF;
+  text-decoration: underline;
+}
+
+.newThread__submit {
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #66D48B;
+  width: 130px;
+  padding: 5px 0 5px 0;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
