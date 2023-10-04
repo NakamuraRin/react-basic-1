@@ -23,9 +23,9 @@ const ThreadList = () => {
             })
             .catch(error => {
               if (error.ErrorCode) {
-                console.log(`エラーコード: ${error.ErrorCode}`);
-                console.log(`${error.ErrorMessageJP}`);
-                console.log(`${error.ErrorMessageEN}`);
+                console.log("エラーコード: " + error.ErrorCode);
+                console.log(error.ErrorMessageJP);
+                console.log(error.ErrorMessageEN);
               } else {
                 console.log("不明なエラーが発生しました。");
               }
@@ -43,4 +43,4 @@ const ThreadList = () => {
     );
 }
 
-export { ThreadList };
+export default ThreadList;

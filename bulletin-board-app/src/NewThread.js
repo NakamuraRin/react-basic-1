@@ -53,4 +53,4 @@ const NewThread  = () => {
     );
 }
 
-export { NewThread };
+export default NewThread;

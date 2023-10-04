@@ -1,8 +1,8 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import { Header } from './Header';
-import { ThreadList } from './ThreadList';
-import { NewThread } from './NewThread';
+import Header from './Header';
+import ThreadList from './ThreadList';
+import NewThread from './NewThread';
 
 const App  = () => {
   return (
@@ -16,4 +16,4 @@ const App  = () => {
   );
 }
 
-export { App };
+export default App;
