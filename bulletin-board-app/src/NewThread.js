@@ -19,6 +19,7 @@ const NewThread  = () => {
         .then(response => {
             if (!response.ok) {
               return response.json().then(errorData => {
+                console.log(errorData);
                 throw errorData;
               });
             }
@@ -30,9 +31,12 @@ const NewThread  = () => {
           })
           .catch(error => {
             if (error.ErrorCode) {
-              console.log(`エラーコード: ${error.ErrorCode}`);
-              console.log(`${error.ErrorMessageJP}`);
-              console.log(`${error.ErrorMessageEN}`);
+                if (error.ErrorCode === 400) {
+                    alert("スレッドタイトルを入力してください")
+                }
+                console.log(`エラーコード: ${error.ErrorCode}`);
+                console.log(`${error.ErrorMessageJP}`);
+                console.log(`${error.ErrorMessageEN}`);
             } else {
               console.log("不明なエラーが発生しました。");
             }
@@ -43,7 +47,7 @@ const NewThread  = () => {
         <div className="newThread__inner">
             <div className="newThread__container">
                 <h2 className="newThread__title">スレッド新規作成</h2>
-                <input type="text" id="thread-title" name="thread-title" placeholder="スレッドタイトル"></input>
+                <input type="text" id="thread-title" name="thread-title" placeholder="スレッドタイトル" required></input>
                 <div className="newThread__button-container">
                     <Link to="/" className="newThread__back-button">Topに戻る</Link>
                     <button className='newThread__submit' onClick={ newThreadPost }>作成</button>

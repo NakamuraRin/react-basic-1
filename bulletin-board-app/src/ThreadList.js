@@ -13,6 +13,7 @@ const ThreadList = () => {
             .then(response => {
               if (!response.ok) {
                 return response.json().then(errorData => {
+                  console.log(errorData);
                   throw errorData;
                 });
               }
