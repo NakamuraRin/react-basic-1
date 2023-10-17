@@ -39,7 +39,6 @@
 .threadList__inner,
 .newThread__inner {
   width: 500px;
-  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -59,6 +58,7 @@
 }
 
 .thread__container {
+  display: inline-block;
   padding: 15px;
   width: 500px;
   height: 45px;
@@ -68,6 +68,8 @@
   background-color: #ffffff;
   border: 1px solid #565656;
   text-align: left;
+  text-decoration: none;
+  color: #000000;
 }
 
 .newThread__container {
@@ -112,6 +114,68 @@
   background-color: #66D48B;
   width: 130px;
   padding: 5px 0 5px 0;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.threadPostList__inner {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  text-align: left;
+}
+
+.threadPostList__wrapper {
+  flex: 3;
+}
+
+.threadPostList__title {
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin: 40px;
+  text-align: left;
+}
+
+.post__container {
+  display: inline-block;
+  padding: 20px 50px;
+  width: 500px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #ffffff;
+  border: none;
+  text-align: left;
+  text-decoration: none;
+  color: #000000;
+  white-space: pre-line;
+  margin: 0 0 20px 0;
+}
+
+.postForm__container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#thread-post {
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  padding: 15px;
+  margin-top: 120px;
+  resize: none;
+}
+
+.postForm__submit {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 40px;
+  color: #fff;
+  background-color: #66D48B;
+  padding: 15px 0 15px 0;
   border-radius: 10px;
   border: none;
   cursor: pointer;

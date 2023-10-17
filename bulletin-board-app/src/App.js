@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import ThreadList from './ThreadList';
 import NewThread from './NewThread';
+import ThreadPostList from './ThreadPostList';
 
 const App  = () => {
   return (
@@ -11,6 +12,7 @@ const App  = () => {
       <Routes>
         <Route path="/" element={ <ThreadList /> } />
         <Route path="/thread/new" element={ <NewThread />} />
+        <Route path="/thread/:thread_id" element={ <ThreadPostList /> } />
       </Routes>
     </div>
   );
