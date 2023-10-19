@@ -4,10 +4,13 @@ const ThreadPostForm  = ({ thread_id }) => {
   console.log(thread_id);
 
   const newPost = () => {
-    const newPostSentence = document.getElementById("thread-post").value;
+    const postForm = document.getElementById("postForm");
+    const postFormValidation = document.getElementById("postForm__validation");
+    const newPostSentence = postForm.value;
 
     if (!newPostSentence) {
-      alert("投稿文を入力してください");
+      postForm.classList.add("highlight__red");
+      postFormValidation.classList.remove("hidden");
       return;
     }
 
@@ -35,9 +38,6 @@ const ThreadPostForm  = ({ thread_id }) => {
       })
       .catch(error => {
         if (error.ErrorCode) {
-            if (error.ErrorCode === 400) {
-                alert("投稿文を入力してください")
-            }
             console.log(`エラーコード: ${error.ErrorCode}`);
             console.log(`${error.ErrorMessageJP}`);
             console.log(`${error.ErrorMessageEN}`);
@@ -49,7 +49,8 @@ const ThreadPostForm  = ({ thread_id }) => {
 
     return (
         <div className="postForm__container">
-          <textarea id="thread-post" name="thread-post" cols="20" rows="6" maxlength="120" placeholder="投稿しよう！" required></textarea>
+          <textarea id="postForm" className="postForm" name="postForm" cols="20" rows="6" maxlength="120" placeholder="投稿しよう！" required></textarea>
+          <p id="postForm__validation" className="hidden">※投稿文を入力してください！</p>
           <button className="postForm__submit" onClick={ newPost }>投稿</button>
         </div>
     );

@@ -160,7 +160,7 @@
   flex-direction: column;
 }
 
-#thread-post {
+.postForm {
   font-size: 16px;
   font-weight: 400;
   border: none;
@@ -169,11 +169,25 @@
   resize: none;
 }
 
+.highlight__red {
+  border: 2px solid red;
+}
+
+#postForm__validation {
+  font-size: 16px;
+  font-weight: 400;
+  color: red;
+  margin: 5px 0 16px 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 .postForm__submit {
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 1px;
-  margin-top: 40px;
   color: #fff;
   background-color: #66D48B;
   padding: 15px 0 15px 0;
