@@ -4,7 +4,7 @@ const ThreadPostForm  = ({ thread_id }) => {
   console.log(thread_id);
 
   const newPost = () => {
-    const newPostSentence = document.getElementById('thread-post').value;
+    const newPostSentence = document.getElementById("thread-post").value;
 
     if (!newPostSentence) {
       alert("投稿文を入力してください");
@@ -49,7 +49,7 @@ const ThreadPostForm  = ({ thread_id }) => {
 
     return (
         <div className="postForm__container">
-          <textarea id="thread-post" name="thread-post" cols="35" rows="6" maxlength="210" placeholder="投稿しよう！" required></textarea>
+          <textarea id="thread-post" name="thread-post" cols="20" rows="6" maxlength="120" placeholder="投稿しよう！" required></textarea>
           <button className="postForm__submit" onClick={ newPost }>投稿</button>
         </div>
     );
